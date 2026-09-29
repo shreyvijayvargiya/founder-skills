@@ -1,8 +1,7 @@
 ---
-
 name: founder-os-synthesizer
 description: Turn multi-capability research into one concise, evidence-based, founder-friendly answer and prioritized action plan.
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Synthesizer
 

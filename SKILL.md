@@ -1,8 +1,7 @@
 ---
-
 name: founder-os
 description: An agentic operating system for SaaS founders that researches, validates, builds, launches, and grows SaaS products by dynamically selecting specialized capabilities.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Founder OS
 

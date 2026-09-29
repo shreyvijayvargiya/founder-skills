@@ -1,8 +1,7 @@
 ---
-
 name: founder-os-context-compressor
 description: Convert capability outputs into compact structured context that can safely and efficiently be passed to other capabilities.
-----------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Context Compressor
 

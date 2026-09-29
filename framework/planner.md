@@ -1,8 +1,7 @@
 ---
-
 name: founder-os-planner
 description: Create the smallest useful execution plan for a Founder OS objective before selecting capabilities.
-----------------------------------------------------------------------------------------------------------------
+---
 
 # Planner
 

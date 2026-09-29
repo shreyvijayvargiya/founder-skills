@@ -1,8 +1,7 @@
 ---
-
 name: founder-os-router
 description: Select the minimum relevant Founder OS capabilities and determine their execution order.
------------------------------------------------------------------------------------------------------
+---
 
 # Router
 

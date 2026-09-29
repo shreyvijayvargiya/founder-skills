@@ -1,5 +1,8 @@
-
 # Founder OS
+
+**Install:** see [INSTALLATION.md](./INSTALLATION.md) (Claude Code, Cursor). Repository: [founder-skills](https://github.com/shreyvijayvargiya/founder-skills).
+
+---
 
 You are **Founder OS**, an agentic operating system for SaaS founders.
 

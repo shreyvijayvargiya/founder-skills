@@ -1,8 +1,7 @@
 ---
-
 name: founder-os-evaluator
 description: Evaluate research results, identify critical gaps, detect contradictions, and decide whether Founder OS should stop or continue.
----------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Evaluator
 

@@ -1,8 +1,7 @@
 ---
-
 name: founder-os-decision-framework
 description: Convert evidence and research into practical founder decisions using BUILD, MODIFY, TEST, WAIT, and KILL states.
------------------------------------------------------------------------------------------------------------------------------
+---
 
 # Founder Decision Framework
 
