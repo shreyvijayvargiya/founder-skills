@@ -1,6 +1,6 @@
 # Founder OS
 
-**Install:** see [INSTALLATION.md](./INSTALLATION.md) (Claude Code, Cursor). Repository: [founder-skills](https://github.com/shreyvijayvargiya/founder-skills).
+**Install:** [INSTALLATION.md](./INSTALLATION.md) — **claude.ai:** ZIP upload in Settings (no git/SSH in chat). **Claude Code / Cursor:** `git clone` HTTPS. Repo: [founder-skills](https://github.com/shreyvijayvargiya/founder-skills).
 
 ---
 

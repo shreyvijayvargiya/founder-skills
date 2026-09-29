@@ -125,12 +125,8 @@ Every file in the repository, what it is, and who uses it.
 | `framework/router.md`              | Protocol | Parent agent          | Select minimum capabilities, set order, parallel vs sequential, avoid redundant research.   |
 | `framework/context-compressor.md`  | Protocol | Parent agent          | Compress capability output into facts, findings, risks, confidence — not full reports.      |
 | `framework/evaluator.md`           | Protocol | Parent agent          | Decide if the objective is answered, find gaps/contradictions, suggest next capabilities.   |
-| `framework/decison-framework.md`   | Protocol | Parent agent          | Map evidence to BUILD / MODIFY / TEST / WAIT / KILL recommendations.                        |
+| `framework/decision-framework.md`  | Protocol | Parent agent          | Map evidence to BUILD / MODIFY / TEST / WAIT / KILL recommendations.                        |
 | `framework/synthesizer.md`         | Protocol | Parent agent          | Format the final founder response: recommendation, findings, why it matters, next steps.    |
-
-
-> **Note:** `evaluator.md` and `decison-framework.md` are misspelled in the filename (`evalutator`, `decison`). The parent skill references them by these paths — rename only if you update all references.
-
 
 
 ### `capabilities/validate/` — research before building
