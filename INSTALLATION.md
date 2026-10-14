@@ -1,6 +1,6 @@
 # Installing Founder OS
 
-Founder OS is **one skill** named `founder-os`: a root `SKILL.md`, plus `capabilities/` (validate, build, launch, grow) and `framework/` (planner, router, etc.). Install the **whole tree** — not individual capability folders.
+Founder OS is **one skill** named `founder-os`: a root `SKILL.md`, plus `capabilities/` (build, grow, seo, customers) and `framework/` (planner, router, etc.). Install the **whole tree** — not individual capability folders.
 
 Repository: https://github.com/shreyvijayvargiya/founder-skills
 
@@ -160,7 +160,7 @@ Start a new session after updating.
 |------|------|
 | `SKILL.md` | Parent agent (entry point) |
 | `framework/` | Planner, router, evaluator, synthesizer, etc. |
-| `capabilities/` | 21 specialist agents (`AGENT.md` per capability) |
+| `capabilities/` | 32 specialist agents (`AGENT.md` per capability) |
 
 Capabilities are loaded by the parent skill; you do not upload them as separate skills.
 
@@ -169,5 +169,5 @@ Capabilities are loaded by the parent skill; you do not upload them as separate 
 ## More detail
 
 - [docs.md](./docs.md) — architecture and capability list  
-- [README.md](./README.md) — full parent skill instructions  
+- [SKILL.md](./SKILL.md) — full parent skill instructions  
 - [Claude custom skills help](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills)
