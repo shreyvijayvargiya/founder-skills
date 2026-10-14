@@ -83,15 +83,18 @@ Each file in `framework/` is one step in the **operating loop**. Together they t
 ```
 founderos/
 ├── SKILL.md                 ← Parent agent (main entry point)
-├── README.md                ← Same content as SKILL.md (for GitHub readers)
+├── README.md                ← Skill library index + roadmap
 ├── docs.md                  ← This file
 ├── LICENSE
 ├── framework/               ← Orchestration playbook
-└── capabilities/            ← Specialist agents
-    ├── validate/            ← Should I build this? Market, competitors, pricing
-    ├── build/                 ← MVP scope, leads, pre-launch SEO
-    ├── launch/                ← Go-live setup, Product Hunt, directories
-    └── grow/                  ← SEO, content, links, AI search visibility
+├── CONTRIBUTING.md          ← How to add a skill
+├── templates/               ← AGENT.template.md for new skills
+├── scripts/                 ← package-for-claude-ai.sh, sync-registry.py
+└── capabilities/            ← Specialist skills
+    ├── build/               ← Validate, scope, position, price
+    ├── grow/                ← Launch, directories, outreach, weekly report
+    ├── seo/                 ← Audits, content, links, AI search
+    └── customers/           ← Leads, voice, interviews, feedback, onboarding, churn
 ```
 
 ---
@@ -108,7 +111,7 @@ Every file in the repository, what it is, and who uses it.
 | File        | Type          | Used by      | Purpose                                                                                                   |
 | ----------- | ------------- | ------------ | --------------------------------------------------------------------------------------------------------- |
 | `SKILL.md`  | Parent skill  | Cursor agent | Main instructions: operating loop, evidence rules, how to load capabilities. **This is the entry point.** |
-| `README.md` | Documentation | Humans       | GitHub-facing copy of the parent skill (same role as `SKILL.md`).                                         |
+| `README.md` | Documentation | Humans       | Skill library index, roadmap, how to add skills.                                                          |
 | `docs.md`   | Documentation | Humans       | Repository map and plain-language guide (this file).                                                      |
 | `LICENSE`   | Legal         | Humans       | MIT license.                                                                                              |
 
@@ -129,64 +132,11 @@ Every file in the repository, what it is, and who uses it.
 | `framework/synthesizer.md`         | Protocol | Parent agent          | Format the final founder response: recommendation, findings, why it matters, next steps.    |
 
 
-### `capabilities/validate/` — research before building
+### `capabilities/` — skills by category
 
-
-| File                                                     | Capability                | Purpose                                                                                                |
-| -------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `capabilities/validate/saas-discovery/AGENT.md`          | `saas-discovery`          | Research a SaaS URL: product, ICP, competitors, positioning. Starting point before SEO or growth work. |
-| `capabilities/validate/market-intelligence/AGENT.md`     | `market-intelligence`     | Market/category analysis: demand, trends, risks, opportunities.                                        |
-| `capabilities/validate/competitor-intelligence/AGENT.md` | `competitor-intelligence` | Deep competitor research: positioning, strengths, weaknesses, moves.                                   |
-| `capabilities/validate/pricing-intelligence/AGENT.md`    | `pricing-intelligence`    | Pricing and packaging research vs competitors.                                                         |
-
-
-
-
-### `capabilities/build/` — scope and pre-launch
-
-
-| File                                                     | Capability                   | Purpose                                                                        |
-| -------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------ |
-| `capabilities/build/saas-seo-discovery/AGENT.md`         | `saas-seo-discovery`         | Pre-launch SEO baseline: site inventory, page gaps, quick wins.                |
-| `capabilities/build/micro-saas-builder/AGENT.md`         | `micro-saas-builder`         | Scope a micro-SaaS MVP: ICP, features, pricing, distribution.                  |
-| `capabilities/build/lead-research-intelligence/AGENT.md` | `lead-research-intelligence` | Find communities, lead sources, and outreach angles for the ICP.               |
-| `capabilities/build/ai-agent-opportunity/AGENT.md`       | `ai-agent-opportunity`       | Find AI agent/automation product opportunities from workflows and pain points. |
-
-
-
-
-### `capabilities/launch/` — go live
-
-
-| File                                                   | Capability                | Purpose                                                                               |
-| ------------------------------------------------------ | ------------------------- | ------------------------------------------------------------------------------------- |
-| `capabilities/launch/launch-foundation-audit/AGENT.md` | `launch-foundation-audit` | Post-launch setup audit: Search Console, indexing, sitemap, analytics, GBP, listings. |
-| `capabilities/launch/saas-launch/AGENT.md`             | `saas-launch`             | Launch plan: Product Hunt, channels, assets, timeline.                                |
-| `capabilities/launch/directory-launch/AGENT.md`        | `directory-launch`        | SaaS directory submission strategy and listing copy.                                  |
-
-
-
-
-### `capabilities/grow/` — SEO and growth
-
-
-| File                                                 | Capability                | Purpose                                                                    |
-| ---------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------- |
-| `capabilities/grow/seo-opportunity/AGENT.md`         | `seo-opportunity`         | Prioritized SEO pages, keywords, gaps, commercial opportunities.           |
-| `capabilities/grow/seo-content-planner/AGENT.md`     | `seo-content-planner`     | Clusters, briefs, internal links, publishing roadmap (after SEO research). |
-| `capabilities/grow/seo-page-generator/AGENT.md`      | `seo-page-generator`      | Write a full SEO page: title, meta, body, FAQ, CTA.                        |
-| `capabilities/grow/seo-authority-architect/AGENT.md` | `seo-authority-architect` | Site architecture, authority flow, silos, entity relationships.            |
-| `capabilities/grow/internal-link-optimizer/AGENT.md` | `internal-link-optimizer` | Fix orphan pages, improve internal linking.                                |
-| `capabilities/grow/content-gap/AGENT.md`             | `content-gap`             | Topics and formats competitors cover that you don't.                       |
-| `capabilities/grow/content-decay-recovery/AGENT.md`  | `content-decay-recovery`  | Diagnose declining content and plan updates/consolidation.                 |
-| `capabilities/grow/competitor-seo-page/AGENT.md`     | `competitor-seo-page`     | Alternative/comparison/switching pages targeting a competitor.             |
-| `capabilities/grow/query-fan-out-optimizer/AGENT.md` | `query-fan-out-optimizer` | Expand a topic into related queries and intents (SEO, GEO, AEO).           |
-| `capabilities/grow/geo-aeo-audit/AGENT.md`           | `geo-aeo-audit`           | AI search visibility audit (ChatGPT, Claude, Gemini, Perplexity).          |
-
+See the generated skill tables in [README.md](./README.md#skills) (source of truth: each `AGENT.md` frontmatter). Categories: `build`, `grow`, `seo`, `customers`.
 
 ---
-
-
 
 ## Capability quick-pick (common founder questions)
 
@@ -211,7 +161,7 @@ Every file in the repository, what it is, and who uses it.
 
 ## Adding a new capability (checklist)
 
-1. Create `capabilities/<stage>/<name>/AGENT.md`
+1. Create `capabilities/<category>/<name>/AGENT.md` (start from `templates/AGENT.template.md`)
 2. Add YAML frontmatter:
   ```yaml
    ---
@@ -219,7 +169,7 @@ Every file in the repository, what it is, and who uses it.
    description: One sentence — what it does and when to use it.
    ---
   ```
-3. Add a row to `framework/capability-registry.md`
+3. Run `python3 scripts/sync-registry.py` (updates README + registry tables)
 4. If it overlaps with existing capabilities, add routing hints to `framework/router.md`
 
 You do **not** need to change `SKILL.md` unless the parent operating loop itself changes.
